@@ -1,5 +1,5 @@
 # Fiesta Online Tools
-#### A compilation of useful tools for Fiesta Online. I did not have time to finish all of them, so some are still WIP. There are some TODOs left in there, and if you would like to work on them, feel free to create a pull request and I will look at it.
+#### A compilation of useful tools for Fiesta Online. I did not have time to finish all of them, so some are still WIP. There are some TODOs left in there, and if you would like to work on them, feel free to create a pull request and I will look at it. That being said, I do hope to see contributions. All small bits help! :)
  
 The repository contains the following tools:
 
