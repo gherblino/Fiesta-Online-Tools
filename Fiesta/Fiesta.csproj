@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D395724C-F531-475A-8A93-741D85FD6B29}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Fiesta</RootNamespace>
+    <AssemblyName>Fiesta</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Direction.cs" />
+    <Compile Include="DirectionHelper.cs" />
+    <Compile Include="FileFormats\ActionInfo\ActionInfo.cs" />
+    <Compile Include="FileFormats\ActionInfo\ActionInfoSet.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Effect\Effect.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Effect\Direction.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Effect\Files.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Effect\Keep.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Effect\Notes.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Effect\Position.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Sound\Sound.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Sound\Files.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Sound\Notes.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\Sound\Position.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\WeaponDemand.cs" />
+    <Compile Include="FileFormats\ActionInfo\Types\WeaponType.cs" />
+    <Compile Include="FileFormats\Files\SHN.cs" />
+    <Compile Include="FileFormats\Map\AreaInfoData\AID.cs" />
+    <Compile Include="FileFormats\Map\AreaInfoData\AreaData\AE_Circle.cs" />
+    <Compile Include="FileFormats\Map\AreaInfoData\AreaData\AE_Square.cs" />
+    <Compile Include="FileFormats\Map\AreaInfoData\AreaData\AreaType.cs" />
+    <Compile Include="FileFormats\Map\AreaInfoData\AreaInfoData.cs" />
+    <Compile Include="FileFormats\Map\AreaInfoData\AreaData\IAreaData.cs" />
+    <Compile Include="FileFormats\Map\ShineBlockInfo\MapDoorBlockElement.cs" />
+    <Compile Include="FileFormats\Map\MapBlockInformation.cs" />
+    <Compile Include="FileFormats\Map\ShineBlockInfo\MapDoorArray.cs" />
+    <Compile Include="FileFormats\Map\ShineBlockData\SHBD.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\BackGroundColor.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\Color.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\DirectionLightAmbient.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\DirectionLightDiffuse.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\Fog.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\Frustum.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\GlobalLight.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\MapElement.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\MapObject.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\Position.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\SHMD.cs" />
+    <Compile Include="FileFormats\Map\ShineMapData\Elements\MainMapElement.cs" />
+    <Compile Include="FileFormats\Player\Class.cs" />
+    <Compile Include="FileFormats\Player\Gender.cs" />
+    <Compile Include="FileFormats\Quest\Actions\TargetType.cs" />
+    <Compile Include="FileFormats\Quest\Actions\TypeIf.cs" />
+    <Compile Include="FileFormats\Quest\Actions\TypeThen.cs" />
+    <Compile Include="FileFormats\Quest\Conditions\EndCondition\EndCondition.cs" />
+    <Compile Include="FileFormats\Quest\Conditions\EndCondition\NPCMobAction.cs" />
+    <Compile Include="FileFormats\Quest\Conditions\EndCondition\NPCMobList.cs" />
+    <Compile Include="FileFormats\Quest\Daily\DailyType.cs" />
+    <Compile Include="FileFormats\Quest\Daily\DateMode.cs" />
+    <Compile Include="FileFormats\Quest\Conditions\EndCondition\ItemList.cs" />
+    <Compile Include="FileFormats\Quest\Quest.cs" />
+    <Compile Include="FileFormats\Quest\Actions\Action.cs" />
+    <Compile Include="FileFormats\Quest\QuestData.cs" />
+    <Compile Include="FileFormats\Player\Race.cs" />
+    <Compile Include="FileFormats\Player\CharacterTitleType.cs" />
+    <Compile Include="FileFormats\Quest\Texts\NPC.cs" />
+    <Compile Include="FileFormats\Quest\Texts\Description.cs" />
+    <Compile Include="FileFormats\Player\CharacterTitle.cs" />
+    <Compile Include="FileFormats\Quest\Rewards\Reward.cs" />
+    <Compile Include="FileFormats\Quest\Rewards\RewardType.cs" />
+    <Compile Include="FileFormats\Quest\Rewards\RewardUse.cs" />
+    <Compile Include="FileFormats\Quest\Conditions\StartCondition.cs" />
+    <Compile Include="FileFormats\Quest\QuestType.cs" />
+    <Compile Include="FileFormats\Quest\Rewards\Values\Abstate.cs" />
+    <Compile Include="FileFormats\Quest\Rewards\Values\Item.cs" />
+    <Compile Include="FileFormats\Quest\Rewards\Values\Value.cs" />
+    <Compile Include="FileFormats\Quest\Texts\Title.cs" />
+    <Compile Include="Properties\Annotations.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StringHelper.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

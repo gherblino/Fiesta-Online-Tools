@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A4F5275E-8478-4389-BB20-8A505BFC5721}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DropTableEditor</RootNamespace>
+    <AssemblyName>DropTableEditor</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frmCredits.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCredits.Designer.cs">
+      <DependentUpon>frmCredits.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DropTableEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DropTableEditor.Designer.cs">
+      <DependentUpon>DropTableEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOpenFile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOpenFile.Designer.cs">
+      <DependentUpon>frmOpenFile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ItemGroup.cs" />
+    <Compile Include="Models\Mob.cs" />
+    <Compile Include="Models\MobDropGroupEntry.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Shine\ShineFile.cs" />
+    <Compile Include="Shine\ShineReader.cs" />
+    <Compile Include="Shine\ShineWriter.cs" />
+    <Compile Include="SHN\Extensions\BinaryReader.cs" />
+    <Compile Include="SHN\Extensions\BinaryWriter.cs" />
+    <Compile Include="SHN\ShnColumn.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SHN\ShnCrypter.cs" />
+    <Compile Include="SHN\ShnFile.cs" />
+    <Compile Include="SHN\ShnReader.cs" />
+    <Compile Include="SHN\ShnWriter.cs" />
+    <Compile Include="Tools\frmAddToAll.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmAddToAll.Designer.cs">
+      <DependentUpon>frmAddToAll.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmGroupRateEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Tools\frmGroupRateEditor.Designer.cs">
+      <DependentUpon>frmGroupRateEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Tools\frmParent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <EmbeddedResource Include="frmCredits.resx">
+      <DependentUpon>frmCredits.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DropTableEditor.resx">
+      <DependentUpon>DropTableEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOpenFile.resx">
+      <DependentUpon>frmOpenFile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Tools\frmAddToAll.resx">
+      <DependentUpon>frmAddToAll.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Tools\frmGroupRateEditor.resx">
+      <DependentUpon>frmGroupRateEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
